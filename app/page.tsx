@@ -1,95 +1,57 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+
+import "@/assets/css/home.css";
+import Link from "next/link";
+import PostCard from "./ui/PostCard";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const componentRef = useRef(null);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  useGSAP(() => {
+
+    // gsap.from
+
+  }, { scope: componentRef });
+
+  return (
+    <div id="component" ref={componentRef}>
+      <div className="static">
+        <div className="image">
+          <img
+            src="/images/image-web-3-desktop.jpg"
+            alt="Web 3.0 Desktop illustration"
+          />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="present">
+          <h1>
+            Hello gang ! I'm <span className="imp-light">Victor</span> and I
+            like talking about programming.
+          </h1>
+        </div>
+        <div className="cta">
+          <p>
+            I'm a lazy but very productive guy. Don't ask me how, that's just
+            how things are ! I'm a big rap enthusiast and I'm the biggest fan of
+            2Pac Shakur. I case you wanna know more about me, you know what step
+            to take next !
+          </p>
+          <Link href="/" className="cta-btn">
+            Let's Chat
+          </Link>
+        </div>
+
+        <div className="articles-list">
+          <h3>Latest Posts</h3>
+          <ul>
+            <PostCard />
+            <PostCard />
+            {/* On desktop, only display 2 posts so we don't have the scrollbar */}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
