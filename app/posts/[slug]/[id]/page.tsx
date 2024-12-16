@@ -48,6 +48,7 @@ const PostReading = () => {
       <div className="stick-articles">
         <LatestPosts />
       </div>
+      <i id="post-page"></i>
     </section>
   );
 };
