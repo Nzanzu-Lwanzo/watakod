@@ -29,7 +29,20 @@ const PostReading = () => {
             </div>
           </div>
         </div>
-        <div className="content"></div>
+        <div className="content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
+          adipisci magni placeat, quibusdam non labore natus asperiores vel
+          saepe aut doloremque atque temporibus nostrum quam voluptatum iure
+          consectetur? Explicabo, quasi! <br />
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+          placeat iure incidunt assumenda debitis nulla magni a dignissimos sed
+          distinctio et facilis veritatis asperiores laborum voluptatibus modi
+          cum, aliquid at. <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+          necessitatibus officiis et quod ducimus autem possimus, sequi atque
+          corrupti debitis accusantium iusto tenetur quibusdam perspiciatis
+          aliquid obcaecati ipsum doloribus repudiandae.
+        </div>
         <Actions />
       </article>
       <div className="stick-articles">

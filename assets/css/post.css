@@ -79,3 +79,27 @@ article {
     }
   }
 }
+
+/* MEDIA QUERIES */
+
+@media only all and (max-width: 1000px) {
+  body {
+    padding-inline: 0;
+  }
+
+  header,
+  .stick-articles {
+    padding-inline: 2rem;
+  }
+
+  section {
+    grid-template-columns: auto;
+    .top-card {
+      border-radius: 0;
+    }
+
+    article > *:not(.top-card) {
+      padding-inline: 2rem;
+    }
+  }
+}
