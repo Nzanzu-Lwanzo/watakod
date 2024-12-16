@@ -7,7 +7,7 @@ const PostCard = () => {
         <img src="/images/image-web-3-mobile.jpg" alt="Post image" />
         <div className="about">
           <h3>Harnessing the power of JavaScript decorators</h3>
-          <Link href="/" className="intro">
+          <Link href="/posts/slug/1" className="intro">
             Javascript is a OOP programming language used in many fields of
             computer sience for it's ease and its versatility. To make the most
             out of this beautiful language, there are some concepts we need to
@@ -17,6 +17,6 @@ const PostCard = () => {
       </div>
     </li>
   );
-}
+};
 
-export default PostCard
+export default PostCard;

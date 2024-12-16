@@ -1,28 +1,18 @@
-"use client"
-
 import "@/assets/css/home.css";
 import Link from "next/link";
-import PostCard from "./ui/PostCard";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import LatestPosts from "./ui/LatestPosts";
+import Image from "next/image";
 
 export default function Home() {
-  const componentRef = useRef(null);
-
-  useGSAP(() => {
-
-    // gsap.from
-
-  }, { scope: componentRef });
-
   return (
-    <div id="component" ref={componentRef}>
+    <div id="component">
       <div className="static">
         <div className="image">
-          <img
+          <Image
             src="/images/image-web-3-desktop.jpg"
             alt="Web 3.0 Desktop illustration"
+            width={900}
+            height={280}
           />
         </div>
         <div className="present">
@@ -43,14 +33,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="articles-list">
-          <h3>Latest Posts</h3>
-          <ul>
-            <PostCard />
-            <PostCard />
-            {/* On desktop, only display 2 posts so we don't have the scrollbar */}
-          </ul>
-        </div>
+        <LatestPosts></LatestPosts>
       </div>
     </div>
   );
